@@ -66,3 +66,17 @@ CxHywgrWfsLyjii2WufGIEz5Do1RoJ/BEBAJi/eH0bUnXV77zhku+p3n775ZXP+R
 
 ### SSL Labs Test Screenshot
 ![SSLLabs](https://user-images.githubusercontent.com/75664650/128040080-8e27acab-3cd1-4b62-8803-4d0d6c4a40b4.png)
+
+## Email Security Hardening 
+
+### 1) Added SPF Records
+### 2) Added DMARC Policy
+### 3) Added DKIM Records
+### 4) Encrypted Outgoing Mail with S/MIME Certificate
+
+### As a result of using S/MIME the receiver would see the email address "admin@lt-2021-047.ml" as a verified email address. Screenshot below.
+
+![MIME](https://user-images.githubusercontent.com/75664650/128041233-d111505e-da9e-4ac5-914b-5ac6573dd2f8.png)
+
+
+
