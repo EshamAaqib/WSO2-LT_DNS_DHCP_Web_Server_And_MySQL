@@ -1,5 +1,9 @@
 # WSO2_DNS_DHCP_Web_Server_And_MySQL_Assignment
 
+
+## Student ID - LT-2021-047
+## URL - lt-2021-047.ml or www.lt-2021-047.ml 
+
 ## Screenshot of DNS Records 
 
 ### I had few issues with Freenom DNS and as we had access to GCP is switched Google DNS as its more reliable and fast.
@@ -38,3 +42,25 @@ CxHywgrWfsLyjii2WufGIEz5Do1RoJ/BEBAJi/eH0bUnXV77zhku+p3n775ZXP+R
 0e1YRYGVYygujDAnEB+6AWsCAwEAAQ==
 -----END PUBLIC KEY-----
 ```
+
+## Nginx Host Config File and SSL Configuration file is available in the Nginx Host Config Folder
+
+
+## Nginx Security Hardening 
+
+### 1) Using a 4096 Bit RSA SSL Certificate
+### 2) Disabled weak SSL/TLS protocols
+### 3) Disabled weak cipher suites and added stronger ones
+### 4) Secure Diffie-Hellman for TLS
+### 5) Enabled HTTP Strict Transport Security
+### 6) Enabled DNSSEC
+### 7) Disabled unwanted HTTP methods
+### 8) Disabled direct IP access
+### 9) Clickjacking Attack prevention
+### 10) X-XSS Protection
+### 11) Excluded Server Headers
+### 12) Prevented Buffer Overflow
+### 13) DNS Certification Authority Authorization (CAA) Policy
+
+![SSLLabs](https://user-images.githubusercontent.com/75664650/128039234-3d9896da-a30c-4839-beec-4b474ee52b3c.png)
+### SSL Labs Test Screenshot
