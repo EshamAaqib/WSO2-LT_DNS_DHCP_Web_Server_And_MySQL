@@ -8,11 +8,12 @@
 
 ### I had few issues with Freenom DNS and as we had access to GCP is switched Google DNS as its more reliable and fast.
 
-![Nameservers](https://user-images.githubusercontent.com/75664650/128033123-4c31f807-a8f6-4081-8b2d-8f225115f818.png)
 ###### Screenshot of the Nameserver
+![Nameservers](https://user-images.githubusercontent.com/75664650/128033123-4c31f807-a8f6-4081-8b2d-8f225115f818.png)
 
-![DNS_Records](https://user-images.githubusercontent.com/75664650/128033178-2a579437-76b6-4595-af6f-7bf815f21af2.png)
 ###### Screenshot of DNS Records
+![DNS_Records](https://user-images.githubusercontent.com/75664650/128033178-2a579437-76b6-4595-af6f-7bf815f21af2.png)
+
 
 ## Mail Service
 
@@ -62,5 +63,6 @@ CxHywgrWfsLyjii2WufGIEz5Do1RoJ/BEBAJi/eH0bUnXV77zhku+p3n775ZXP+R
 ### 12) Prevented Buffer Overflow
 ### 13) DNS Certification Authority Authorization (CAA) Policy
 
-![SSLLabs](https://user-images.githubusercontent.com/75664650/128039234-3d9896da-a30c-4839-beec-4b474ee52b3c.png)
+
 ### SSL Labs Test Screenshot
+![SSLLabs](https://user-images.githubusercontent.com/75664650/128040080-8e27acab-3cd1-4b62-8803-4d0d6c4a40b4.png)
