@@ -72,7 +72,7 @@ CxHywgrWfsLyjii2WufGIEz5Do1RoJ/BEBAJi/eH0bUnXV77zhku+p3n775ZXP+R
 ### 1) Added SPF Records
 ### 2) Added DMARC Policy
 ### 3) Added DKIM Records
-### 4) Encrypted Outgoing Mail with S/MIME Certificate
+### 4) Encrypted Outgoing Mail with S/MIME Certificate (Free certificate issued by Actalis ; https://extrassl.actalis.it/portal/uapub/freemail?lang=en)
 
 ### As a result of using S/MIME the receiver would see the email address "admin@lt-2021-047.ml" as a verified email address. Screenshot below.
 
