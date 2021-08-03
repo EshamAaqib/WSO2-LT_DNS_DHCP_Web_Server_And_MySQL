@@ -51,7 +51,7 @@ server {
     	ssl_certificate_key /etc/letsencrypt/live/lt-2021-047.ml/privkey.pem; # managed by Certbot
         include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
         ssl_dhparam /etc/letsencrypt/live/lt-2021-047.ml/dhparam4096.pem; # managed by Certbot
-	    ssl_ecdh_curve     secp384r1;
+	ssl_ecdh_curve     secp384r1;
 	
 
 }
@@ -82,12 +82,12 @@ server {
 	add_header X-XSS-Protection "1; mode=block";
 	add_header X-Content-Type-Options nosniff;
 	add_header Content-Security-Policy "default-src 'self'; font-src *;img-src * data:; script-src *; style-src *";
-    add_header Referrer-Policy "strict-origin";
+        add_header Referrer-Policy "strict-origin";
 	add_header Permissions-Policy "geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()";
 	ssl_certificate /etc/letsencrypt/live/lt-2021-047.ml/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/lt-2021-047.ml/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/live/lt-2021-047.ml/dhparam4096.pem; 
+        ssl_certificate_key /etc/letsencrypt/live/lt-2021-047.ml/privkey.pem; # managed by Certbot
+        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+        ssl_dhparam /etc/letsencrypt/live/lt-2021-047.ml/dhparam4096.pem; 
 	ssl_ecdh_curve     secp384r1;
 }
 
