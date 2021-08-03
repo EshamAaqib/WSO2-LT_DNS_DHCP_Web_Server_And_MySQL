@@ -1,0 +1,114 @@
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        server_name _;
+        return 444;
+
+        if ($request_method !~ ^(GET|HEAD|POST)$ ) {
+           return 405;
+        }
+
+}
+
+server {
+	listen 443 ssl;
+	server_name lt-2021-047.ml www.lt-2021-047.ml;
+	add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;	
+
+	location / {
+
+		
+		proxy_pass http://127.0.0.1:8080;
+	}
+
+	  
+	location /secret {
+
+        auth_basic "Administrator Login";
+        auth_basic_user_file /etc/nginx/.htpasswd;
+		alias /var/www/main;
+        }
+
+	location /web0047 {
+                alias /var/www/web0047;
+        }
+
+	if ($host !~ (lt-2021-047.ml|www.lt-2021-047.ml) ) {
+                return 444;
+	}
+
+	if ($request_method !~ ^(GET|HEAD|POST)$ ) {
+                return 405;
+        }
+
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-XSS-Protection "1; mode=block";
+        add_header X-Content-Type-Options nosniff;
+        add_header Content-Security-Policy "default-src 'self'; font-src *;img-src * data:; script-src *; style-src *";
+        add_header Referrer-Policy "strict-origin";
+        add_header Permissions-Policy "geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()";
+    	ssl_certificate /etc/letsencrypt/live/lt-2021-047.ml/fullchain.pem; # managed by Certbot
+    	ssl_certificate_key /etc/letsencrypt/live/lt-2021-047.ml/privkey.pem; # managed by Certbot
+        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+        ssl_dhparam /etc/letsencrypt/live/lt-2021-047.ml/dhparam4096.pem; # managed by Certbot
+	    ssl_ecdh_curve     secp384r1;
+	
+
+}
+
+
+
+
+server {
+	listen 8081 ssl;
+	server_name lt-2021-047.ml www.lt-2021-047.ml;
+	error_page 497 301 =307 https://$host:$server_port$request_uri;
+	add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+
+	location / {
+		
+		proxy_pass http://127.0.0.1:8080;        
+        }
+
+	if ($host !~ (lt-2021-047.ml|www.lt-2021-047.ml) ) {
+                return 444;
+        }
+	
+	if ($request_method !~ ^(GET|HEAD|POST)$ ) {
+                return 405;
+        }
+
+	add_header X-Frame-Options "SAMEORIGIN";
+	add_header X-XSS-Protection "1; mode=block";
+	add_header X-Content-Type-Options nosniff;
+	add_header Content-Security-Policy "default-src 'self'; font-src *;img-src * data:; script-src *; style-src *";
+    add_header Referrer-Policy "strict-origin";
+	add_header Permissions-Policy "geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()";
+	ssl_certificate /etc/letsencrypt/live/lt-2021-047.ml/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/lt-2021-047.ml/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/live/lt-2021-047.ml/dhparam4096.pem; 
+	ssl_ecdh_curve     secp384r1;
+}
+
+
+
+
+server {
+    if ($host = www.lt-2021-047.ml) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = lt-2021-047.ml) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80 ;
+    server_name lt-2021-047.ml www.lt-2021-047.ml;
+    return 404; # managed by Certbot
+
+}
+
+
