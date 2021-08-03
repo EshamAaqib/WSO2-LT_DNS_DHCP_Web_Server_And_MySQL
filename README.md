@@ -4,6 +4,8 @@
 ## Student ID - LT-2021-047
 ## URL - lt-2021-047.ml or www.lt-2021-047.ml 
 
+## URL (Configuration Files and Public Key; I used gitfront.io to share the private github repository) - https://gitfront.io/r/eshamaaqib/2a40ab4bd5f5beb0cb728c4332b67d21e73e73ab/WSO2-DNS-DHCP-Web-Server-And-MySQL-Assignment/
+
 ## Screenshot of DNS Records 
 
 ### I had few issues with Freenom DNS and as we had access to GCP is switched Google DNS as its more reliable and fast.
