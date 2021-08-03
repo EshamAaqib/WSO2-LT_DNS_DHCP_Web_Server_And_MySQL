@@ -8,7 +8,7 @@
 
 ## Screenshot of DNS Records 
 
-### I had few issues with Freenom DNS and as we had access to GCP is switched Google DNS as its more reliable and fast.
+### I had few issues with Freenom DNS and the changes didn't propagate after even waiting for hours, as we had access to GCP I switched to Google DNS as its more reliable and fast and it worked well.
 
 ###### Screenshot of the Nameserver
 ![Nameservers](https://user-images.githubusercontent.com/75664650/128033123-4c31f807-a8f6-4081-8b2d-8f225115f818.png)
